@@ -1,8 +1,12 @@
-# for loop to print all even numbers between 1 and 20.
+# while loop to print numbers from 10 down to 1.
 
-for i in range(1,21):
-    if i%2==0:
-        print(i)
+i=10
+
+while i>0:
+    print (i)
+    i-=1
+
+
 
 
 
