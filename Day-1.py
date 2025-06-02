@@ -1,13 +1,14 @@
-#Swap two variables without using a temporary variable.
-a=5
-b=4
+# if-else program to check if a number is positive, negative, or zero.
+try:
+    a=float(input("Enter any rational number: "))
 
-a=a*b
-b=a/b
-a=(b/a)**-1
+    if a==0:
+        print("Entered Number is 0")
+    elif a>0:
+        print("Entered Number is positive")
+    elif a < 0:
+        print("Entered Number is negative")
 
-
-
-print(a)
-print(b)
+except ValueError:
+    print("Please enter a valid rational number")
 
