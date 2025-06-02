@@ -1,10 +1,9 @@
-# while loop to print numbers from 10 down to 1.
+# Create a list of 5 elements and print each element using a loop.
 
-i=10
+desk_items=["Laptop","Mouse","Keyboard","Desk Mat","Lamp"]
 
-while i>0:
+for i in desk_items:
     print (i)
-    i-=1
 
 
 
