@@ -1,14 +1,8 @@
-# if-else program to check if a number is positive, negative, or zero.
-try:
-    a=float(input("Enter any rational number: "))
+# for loop to print all even numbers between 1 and 20.
 
-    if a==0:
-        print("Entered Number is 0")
-    elif a>0:
-        print("Entered Number is positive")
-    elif a < 0:
-        print("Entered Number is negative")
+for i in range(1,21):
+    if i%2==0:
+        print(i)
 
-except ValueError:
-    print("Please enter a valid rational number")
+
 
