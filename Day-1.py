@@ -1,9 +1,13 @@
-int_var = 5
-float_var = 5.243234
-bool_var = True
-string_var = "Affan"
+#Swap two variables without using a temporary variable.
+a=5
+b=4
 
-print(type(int_var))
-print(type(float_var))
-print(type(bool_var))
-print(type(string_var))
+a=a*b
+b=a/b
+a=(b/a)**-1
+
+
+
+print(a)
+print(b)
+
