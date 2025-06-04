@@ -1,15 +1,41 @@
-# Create two sets: one with your favorite fruits, one with seasonal fruits.
-# Find the union, intersection, and difference of these sets.
-# Check if a particular fruit is present in your favorite fruits set.
+# Write a function that takes two numbers and returns their sum.
+# Write a function that takes a string and prints whether it’s a palindrome.
 
-fav_fruits={"Mango","Strawberry","Apple"}
-seasonal_fruits={"Mango","Watermelon","Strawberry"}
 
-print(fav_fruits.union(seasonal_fruits))
-print(fav_fruits.intersection(seasonal_fruits))
-print(fav_fruits.difference(seasonal_fruits))
 
-if "Watermelon" in fav_fruits:
-    print("Yes watermelon is one of my fav fruits")
+def add(a,b):
+    c=a+b
+    return c
+
+#print(add(90,2376))
+
+
+def check_palindrome(a):
+        i = 0
+        j = len(a) - 1
+
+        def helper(a):
+            nonlocal i
+            nonlocal j
+
+            if i<j:
+                if a[i] == a[j]:
+                    i += 1
+                    j -= 1
+                    helper(a)
+                else:
+                    print("Not palindrome")
+
+            elif i>=j:
+                print("Palindrome")
+
+        helper(a)
+
+
+#check_palindrome("affan")
+#check_palindrome("racecar")
+
+
+
 
 
