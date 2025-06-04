@@ -1,23 +1,15 @@
-# Create a dictionary with 3 student names as keys and their Roll No. as values.
-# Add a new student to the dictionary.
-# Update the Roll no. of one student.
-# Print all the keys and values from the dictionary.
-# Remove one student from the dictionary.
+# Create two sets: one with your favorite fruits, one with seasonal fruits.
+# Find the union, intersection, and difference of these sets.
+# Check if a particular fruit is present in your favorite fruits set.
 
+fav_fruits={"Mango","Strawberry","Apple"}
+seasonal_fruits={"Mango","Watermelon","Strawberry"}
 
-students = {"Affan":4,
-            "Ankon":14,
-            "Anjali":12}
+print(fav_fruits.union(seasonal_fruits))
+print(fav_fruits.intersection(seasonal_fruits))
+print(fav_fruits.difference(seasonal_fruits))
 
-students["Aish"]=7
-
-students["Affan"]=6
-
-print("Keys: ",list(students.keys()))
-print("Values: ",list(students.values()))
-print("Items: ",list(students.items()))
-print(students)
-
-students.pop("Affan")
+if "Watermelon" in fav_fruits:
+    print("Yes watermelon is one of my fav fruits")
 
 
