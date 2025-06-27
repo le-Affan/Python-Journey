@@ -1,65 +1,30 @@
-# Write a function  that
-#takes any number of numerical arguments and returns their sum.
-#accepts any number of string arguments and returns the longest string.
-#takes any number of string arguments and joins them with a hyphen.
-#accepts any number of keyword arguments and prints them in the format: key: value
-#takes default profile details as a dictionary, then uses **kwargs to update any given fields.
+#Create a file called practice.txt and write 3 lines into it.
+#Read and print the contents of practice.txt.
+#Append a new line to practice.txt and read it again.
+#Read practice.txt line by line using a loop.
+#Try opening a file that doesn’t exist and handle it using a try-except.
 
+with open("practice.txt","w") as file:
+    file.write("This is Line 1.\n")
+    file.write("This is Line 2.\n")
+    file.write("This is Line 3.\n")
 
-def addition(*num):
-    sum=0
-    for i in num:
-        sum=sum+i
-    return sum
+with open("practice.txt","a") as file:
+    file.write("This is Line 4 which has been appended.\n")
 
-print(addition(1,2,3,4,5,5))
+with open("practice.txt","r") as file:
+    content=file.read()
+    print(content)
 
+with open("practice.txt","r") as file:
+    for line in file:
+        print(line.strip())
 
-def longest_string(*strings):
-    lengths = []
-    for i in strings:
-        lengths.append(len(i))
-    x = lengths.index(max(lengths))
-    return strings[x]
+#this above sort of simple loop is better since it doesnt load the entire file onto
+#the memoery and rather goes line by line unlike readline() function
 
-print(longest_string("a","ab","abc","abcd"))
-
-#smart way to do this:
-#def longest_string(*strings):
-#    return max(strings, key=len)
-
-def join_hypen(*words):
-    j = 1
-    final_str = []
-
-    for i in words:
-        if j < len(words):
-            median_str = i + "-"
-            final_str.append(median_str)
-        else:
-            final_str.append(i)
-        j += 1
-
-    x = "".join(final_str)
-    return x
-
-print(join_hypen("affan", "shaikh", "is", "20", "years", "old"))
-
-
-def print_kwargs(**students):
-    for key,value in students.items():
-        print(f"{key}:{value}")
-
-print_kwargs(affan=6,ankon=14,anjali=12)
-
-
-
-default_details={"Name":"","Age":0}
-
-def profile_update(**actual_details):
-    for key,value in actual_details.items():
-        default_details[key]=value
-    print(default_details)
-
-profile_update(Name="Affan",Age=45)
-
+try:
+    with open("random.txt","r") as another_file:
+        content= another_file.read()
+except FileNotFoundError:
+    print("The requested file does not exist")
